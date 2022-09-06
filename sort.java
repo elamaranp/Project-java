@@ -8,7 +8,7 @@ class Sort {
             if (arr[i] > arr[i+1]) {
                 int temp = arr[i];
                 arr[i] = arr[i+1];
-                arr[i+1] = temp;
+                arr[i+1] = temp;  //act
             }
         }
         bubbleSort(arr, n-1);
