@@ -21,7 +21,7 @@ class Sort {
 
     public static void main(String[] args) {
         Sort ob = new Sort();
-        int arr[] = {18, 4, 5, 12, 2, 11, 9};
+        int arr[] = {18, 14, 5, 12, 2, 11, 9};
         bubbleSort(arr, arr.length);
         ob.display(arr);
     }
