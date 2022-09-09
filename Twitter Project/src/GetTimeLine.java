@@ -13,19 +13,18 @@ import java.util.List;
  */
 public class GetTimeLine {
     public static void getTimeLine(String apiKey,String apiSecretkey,String accessToken,String accessSecretToken) throws TwitterException {
-        ConfigurationBuilder cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true)
+        ConfigurationBuilder configbuilder = new ConfigurationBuilder();
+        configbuilder.setDebugEnabled(true)
                 .setOAuthConsumerKey(apiKey)
                 .setOAuthConsumerSecret(apiSecretkey)
                 .setOAuthAccessToken(accessToken)
                 .setOAuthAccessTokenSecret(accessSecretToken);
-        TwitterFactory tf = new TwitterFactory(cb.build());
-        Twitter twitter = tf.getInstance();
+        TwitterFactory twitterfactory = new TwitterFactory(configbuilder.build());
+        Twitter twitter = twitterfactory.getInstance();
         List<Status> statuses = twitter.getHomeTimeline();
-        System.out.println("Showing home timeline.");
+        System.out.println("Home timeline");
         for (Status status : statuses) {
-            System.out.println(status.getUser().getName() + ":" +
-                    status.getText());
+            System.out.println(status.getUser().getName() + ":" + status.getText());
         }
     }
 }

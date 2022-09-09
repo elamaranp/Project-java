@@ -12,10 +12,9 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) throws TwitterException, IOException {
-        FileReader twitterKeys=new FileReader("/Users/elamaran.p/Desktop/Twitter project/src/config.properties");
+        FileReader twitterKeys=new FileReader("/Users/elamaran.p/Desktop/git-projects/Project-java/Twitter project/src/config.properties");
         Properties fileProperties=new Properties();
         fileProperties.load(twitterKeys);
-        System.out.println(fileProperties.getProperty("apikey"));
         String apiKey=fileProperties.getProperty("apikey");
         String apiSecretKey=fileProperties.getProperty("apisecretkey");
         String accessKey=fileProperties.getProperty("accesstoken");

@@ -1,4 +1,3 @@
-import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
@@ -15,16 +14,16 @@ public class PostTweet {
     public static void postTweet(String apiKey,String apiSecretkey,String accessToken,String accessSecretToken) throws TwitterException {
         System.out.println("Enter tweet to get posted:");
         Scanner sc = new Scanner(System.in);
-        String tweet = sc.next();
+        String tweet = sc.nextLine();
 
-        ConfigurationBuilder cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true)
+        ConfigurationBuilder configbuilder = new ConfigurationBuilder();
+        configbuilder.setDebugEnabled(true)
                 .setOAuthConsumerKey(apiKey)
                 .setOAuthConsumerSecret(apiSecretkey)
                 .setOAuthAccessToken(accessToken)
                 .setOAuthAccessTokenSecret(accessSecretToken);
-        TwitterFactory tf = new TwitterFactory(cb.build());
-        Twitter twitter = tf.getInstance();
+        TwitterFactory twitterfactory = new TwitterFactory(configbuilder.build());
+        Twitter twitter = twitterfactory.getInstance();
         Twitter twitter1 = TwitterFactory.getSingleton();
         twitter.updateStatus(tweet);
     }
