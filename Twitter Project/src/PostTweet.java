@@ -24,7 +24,7 @@ public class PostTweet {
                 .setOAuthAccessTokenSecret(accessSecretToken);
         TwitterFactory twitterfactory = new TwitterFactory(configbuilder.build());
         Twitter twitter = twitterfactory.getInstance();
-        Twitter twitter1 = TwitterFactory.getSingleton();
+        Twitter twit = TwitterFactory.getSingleton();
         twitter.updateStatus(tweet);
     }
 }
