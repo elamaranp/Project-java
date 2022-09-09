@@ -26,15 +26,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
 
-        PostTweet p = new PostTweet();
-        GetTimeLine g = new GetTimeLine();
+        PostTweet posttweet = new PostTweet();
+        GetTimeLine gettimeline = new GetTimeLine();
 
         switch(choice){
             case 1 :
-                p.postTweet(apiKey,apiSecretKey,accessKey,accessSecretKey);
+                posttweet.postTweet(apiKey,apiSecretKey,accessKey,accessSecretKey);
                 break;
             case 2:
-                g.getTimeLine(apiKey,apiSecretKey,accessKey,accessSecretKey);
+                gettimeline.getTimeLine(apiKey,apiSecretKey,accessKey,accessSecretKey);
                 break;
             case 3:
                 System.exit(0);
