@@ -29,7 +29,7 @@ public class PostTweet {
     public static String postTweet(String tweetMsg)  {
         FileReader twitterKey;
         try {
-            twitterKey = new FileReader("/Users/elamaran.p/Desktop/TwitterApi/src/main/java/com/example/twitterapi/ApiConfig/config.properties");
+            twitterKey = new FileReader("/Users/elamaran.p/Desktop/TwitterApi/Project-java/src/main/java/com/example/twitterapi/ApiConfig/config.properties");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.conf.ConfigurationBuilder;
@@ -19,6 +20,7 @@ import twitter4j.TwitterFactory;
  * This class used for returning timeline of our tweets posted
  */
 
+@Component
 public class TwitterTimeLine {
 
     /**
@@ -48,7 +50,7 @@ public class TwitterTimeLine {
 
         FileReader twitterKeys= null;
         try {
-            twitterKeys = new FileReader("/Users/elamaran.p/Desktop/TwitterApi/src/main/java/com/example/twitterapi/ApiConfig/config.properties");
+            twitterKeys = new FileReader("/Users/elamaran.p/Desktop/TwitterApi/Project-java/src/main/java/com/example/twitterapi/ApiConfig/config.properties");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
