@@ -12,17 +12,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 /**
- * RestController Annotation that is itself annotated
- * with Controller and ResponseBody
- * Controller controlls all Requests
+ * Controller Annotation maps the tweet and timeline
+ * And get back the results 
  */
 @org.springframework.stereotype.Controller
 public class Controller {
     /**
      * PostTweet method for posting the tweet
-     * When the controller hits a request of /tweet
-     * It Maps with the PostTweet Endpoint and executes the Method
-     * returns whether the call successfull or not
+     * When the controller hits a mutation of tweet
+     * Method will post a tweet in our Twitter account
+     * And return the output whether its done successfully or failed to post
      */
     @MutationMapping("tweet")
     public String PostTweet(@Argument String msg){
@@ -33,9 +32,9 @@ public class Controller {
 
     /**
      *TimeLine Method for getting the details we posted
-     * When the controller hits a request of /timeline
-     * It Maps with the TimeLine Endpoint and executes the Method
-     * returns the result in a list
+     * When the controller hits a query of timeline
+     * Method will return the timeline of our post
+     * And return the output of our statuses
      */
     @QueryMapping("timeline")
     public List<Status> TimeLine(){

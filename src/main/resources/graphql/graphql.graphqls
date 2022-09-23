@@ -1,5 +1,10 @@
 
 
+type Status{
+  id : ID!
+  text : String
+}
+
 type Query{
   timeline : [Status]
 }
@@ -8,7 +13,3 @@ type Mutation{
   tweet(msg : String) : String
 }
 
-type Status{
-  id : ID!
-  text : String
-}
