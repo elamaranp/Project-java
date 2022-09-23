@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * Controller Annotation maps the tweet and timeline
- * And get back the results 
+ * And get back the results
  */
 @org.springframework.stereotype.Controller
 public class Controller {
