@@ -93,7 +93,6 @@ public class TwitterTimeLine {
             List<Status> statuses = twitter.getHomeTimeline();
             TwitterTimeLine timelineObject = new TwitterTimeLine();
             timelineObject.TimeLinePrint(statuses);
-            logger.info("Tweet Successful");
             return statuses;
         }
         catch(TwitterException e)
