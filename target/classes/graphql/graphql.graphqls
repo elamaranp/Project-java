@@ -1,0 +1,21 @@
+
+
+type Status{
+  id : ID!
+  text : String
+  user: data
+  createdAt : String
+}
+
+type data{
+  name : String
+  id : ID
+}
+type Query{
+  timeline : [Status]
+}
+
+type Mutation{
+  tweet(msg : String) : String
+}
+
